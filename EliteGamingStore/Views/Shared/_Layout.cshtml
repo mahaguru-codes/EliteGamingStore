@@ -58,16 +58,19 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
     <script>
-        $(document).ready(function() {
-  $.getJSON('/Home/GetFriends', function(data) {
-      console.log(data);
-    var tableRows = '';
-    $.each(data, function(index, value) {
-      tableRows += '<tr><td>' + value.rowId + '</td><td>' + value.name + '</td><td>' + value.address + '</td><td>' + value.gender + '</td></tr>';
-    });
-    $('#friendTable tbody').html(tableRows);
-  });
+
+$.ajax({
+    url: "/Home/GetFriends",
+    type: "GET",
+    success: function(response) {
+        var tableRows = '';
+        $.each(response.data, function(index, value) {
+            tableRows += '<tr><td>' + value.rowId + '</td><td>' + value.name + '</td><td>' + value.address + '</td><td>' + value.gender + '</td></tr>';
+        });
+        $('#friendTable tbody').html(tableRows);
+    }
 });
+
     </script>
 </body>
 </html>

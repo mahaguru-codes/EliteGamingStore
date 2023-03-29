@@ -49,17 +49,42 @@ namespace EliteGamingStore.Classes
                 {
                     command.Connection = connection;
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
-
                     adapter.Fill(dataTable);
-                    connection.Close();
                 }
             }
             catch(Exception err)
             {
 
             }
+            finally
+            {
+                connection.Dispose();
+            }
 
             return dataTable;
+        }
+
+        public int ExecuteDMLQuery(SqlCommand command)
+        {
+            int count = 0;
+            try
+            {
+                if (ConnectDB())
+                {
+                    command.Connection = connection;
+                    count = command.ExecuteNonQuery();
+                }
+            }
+            catch(Exception err)
+            {
+
+            }
+            finally
+            {
+                connection.Dispose();
+            }
+
+            return count;
         }
     }
 }
