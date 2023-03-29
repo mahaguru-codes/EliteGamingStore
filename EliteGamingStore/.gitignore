@@ -1,4 +1,114 @@
-﻿bin/
-obj/
-*.exe
+﻿.vs/
+
+# Binaries
+[Bb]in/
+[Oo]bj/
+
+# Packages
+*.nuget.props
+*.nuget.targets
+*.nupkg
+*.paket.*
+*.bak
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Visual Studio files
 *.suo
+*.user
+*.psess
+*.cache
+*.sln.docstates
+*.sln.ide-shutdownstate
+*.suo
+*.sdf
+*.opensdf
+*.sln.docstates
+
+# ReSharper files
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+
+# NuGet
+**/packages/*
+!**/packages/repositories.config
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# Office Interop
+$RECYCLE.BIN/
+*.tmp
+*.TMP
+*.xls*
+*.xla*
+*.xlsx*
+*.xlsm*
+*.xltx*
+*.xltm*
+*.xlsb*
+*.xlam*
+*.xll
+*.dll
+*.o
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.bak
+*.mdb
+*.accdb
+*.ldb
+*.pst
+*.vsto
+*.ost
+*.bak
+*.orig
+*.mergebackup
+*.*~
+*.~*
+
+# Others
+[Dd]esktop.ini
+~$*
+*.dbmdl
+*.dbproj.schemaview
+*.docstates
+*.jfm
+*.sln.docstates.user
+*.suo.user
+*.userosscache
+*.userprefs
+*.vsp
+*.vspf
+*.vspx
